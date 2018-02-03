@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox alignment="CENTER" spacing="5.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <LineChart fx:id="linechart" minWidth="1700.0">
+        <xAxis>
+          <NumberAxis label="Frekvence" side="BOTTOM" fx:id="xAxis" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="yAxis" label="Amplituda" side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <VBox alignment="CENTER" spacing="5.0">
+         <children>
+            <TextField fx:id="fbot" promptText="Nejnižší frekvence" text="1" />
+            <TextField fx:id="ftop" promptText="Nejvyšší frekvence" text="1000" />
+            <Button mnemonicParsing="false" onAction="#load" text="Vyberte soubor" />
+            <Button mnemonicParsing="false" onAction="#refresh" text="Obnovit" />
+         </children>
+      </VBox>
+   </children>
+</HBox>
